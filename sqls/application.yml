@@ -1,0 +1,30 @@
+    
+spring:
+  application:
+    name: redis-demo-cache
+    
+    
+ ### Datasource and JPA , Profile agonostic configuration   
+  datasource:    
+    driver-class-name: com.mysql.cj.jdbc.Driver
+   
+        
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL55Dialect
+    database: MYSQL
+    generate-ddl: true
+    hibernate:
+      ddl-auto: none 
+    show-sql: true
+  #cache:
+    #redis:
+      #key-prefix: "demo-cache:"
+    
+
+server:
+  error:
+    include-message: always 
+    
+
+
+
