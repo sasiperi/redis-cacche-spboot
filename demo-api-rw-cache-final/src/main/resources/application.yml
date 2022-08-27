@@ -1,0 +1,38 @@
+    
+spring:
+  application:
+    name: sp-api-cache
+    
+    
+ ### Datasource and JPA , Profile agonostic configuration   
+  datasource:    
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #url: jdbc:mysql://localhost:3306/redis_demo01?useSSL=false
+    #username: root
+    #password: 12345
+        
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL55Dialect
+    database: MYSQL
+    generate-ddl: true
+    hibernate:
+      ddl-auto: none
+      #ddl-auto: create-drop   
+    show-sql: true
+  cache:
+    redis:
+      key-prefix: "demo-cache:"
+    
+ ####  Redis profile agonostic configuration
+ 
+  #cache:
+    #redis:
+      #time-to-live: 10
+
+server:
+  error:
+    include-message: always 
+    
+
+
+
