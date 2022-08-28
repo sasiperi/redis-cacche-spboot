@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head> 
+		<meta charset="UTF-8" />
+		<th:block th:include="fragments/meta" />
+		<th:block th:include="fragments/css" />
+		<th:block th:include="fragments/shim" />
+    	<title>Greeting Hello</title>
+	</head>
+	<body>
+		<div class="jumbotron container">
+				<h4><font color="blue"> <a href="/">Home</a></font></h4>
+		</div>
+		<br/>
+		<div class="container">
+			
+			<p th:text="'Hello, ' + ${name} + '!'" />
+		    
+	   </div>
+	   
+	   <div th:replace="fragments/footer :: footer"/>
+	   
+	</body>
+</html>

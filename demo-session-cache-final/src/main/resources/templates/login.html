@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8" />
+		<th:block th:include="fragments/meta" />
+		<th:block th:include="fragments/css" />
+		<th:block th:include="fragments/shim" />
+		<title>Login</title>
+		
+		<!-- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> -->
+	</head>
+	<body>
+		<div class="jumbotron container">
+				<h4><font color="blue"> Hello there ! </font></h4>
+		</div>
+		<br/>
+		<br/>
+			<div class="container">
+				<form>
+				    What is your name? : &nbsp; <input type="text" name="name"/> &nbsp; &nbsp;
+				    <input type="submit" formmethod="post" formaction="/greeting" value="Submit"/ class="btn btn-info">
+				</form>
+			</div>
+			<br/>
+			<div th:replace="fragments/footer :: footer"/>
+	</body>
+</html>

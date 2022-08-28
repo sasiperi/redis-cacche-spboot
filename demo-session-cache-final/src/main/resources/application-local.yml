@@ -1,0 +1,21 @@
+spring:   
+    
+  cache:
+    redis:
+      time-to-live: 15
+      
+  data:
+    redis:
+      client-name: demo-session-cache
+      host: 192.168.1.63
+      username: sasiperi03
+      password: 12345
+     
+  session:
+    redis:
+      namespace: demo-session-cache
+      #cleanup-cron: 0 * * * * *
+      
+      
+      
+  #SessionCleanupConfiguration --> configureTasks

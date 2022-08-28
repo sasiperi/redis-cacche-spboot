@@ -1,0 +1,10 @@
+---
+spring:
+  application:
+    name: demo-session-cache
+  
+  
+server:
+  servlet:
+    session:
+      timeout: 10s
